@@ -1,0 +1,10 @@
+{
+  "vueCompilerOptions": { "experimentalDisableTemplateSupport": true },
+
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

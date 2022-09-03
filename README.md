@@ -1,1 +1,1 @@
-# explorer-frontend
+# gama-frontend
