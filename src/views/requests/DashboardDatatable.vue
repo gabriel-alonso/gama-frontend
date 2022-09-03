@@ -2,31 +2,26 @@
   <v-card>
     <v-data-table
       :headers="headers"
-      :items="userList"
-      item-key="full_name"
+      :items="requests"
+      item-key="protocol"
       class="table-rounded"
+      :loading="isLoadingRequests"
       hide-default-footer
     >
-      <template #[`item.full_name`]="{item}">
+      <template #[`item.name`]="{item}">
         <div class="d-flex flex-column">
           <span
             class="d-block font-weight-semibold text--primary text-truncate"
           >
-            {{ item.full_name }}
+            {{ item.name }}
           </span>
-          <small>{{ item.post }}</small>
+          <small>{{ item.protocol }}</small>
         </div>
       </template>
-      <template #[`item.salary`]="{item}">
-        {{ `$${item.salary}` }}
-      </template>
+
       <template #[`item.status`]="{item}">
-        <v-chip
-          small
-          :color="statusColor[status[item.status]]"
-          class="font-weight-medium"
-        >
-          {{ status[item.status] }}
+        <v-chip small class="font-weight-medium">
+          {{ item.status }}
         </v-chip>
       </template>
     </v-data-table>
@@ -34,43 +29,36 @@
 </template>
 
 <script>
-import { mdiSquareEditOutline, mdiDotsVertical } from '@mdi/js'
-import data from './datatable-data'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  setup() {
-    const statusColor = {
-      Current: 'primary',
-      Professional: 'success',
-      Rejected: 'error',
-      Resigned: 'warning',
-      Applied: 'info'
+  props: {
+    isRequestsLoading: {
+      type: Boolean
     }
+  },
 
+  computed: {
+    ...mapGetters('requestsModule', ['requests', 'isLoadingRequests'])
+  },
+
+  methods: {
+    ...mapActions('requestsModule', ['findAll'])
+  },
+
+  async mounted() {
+    await this.findAll()
+  },
+
+  data() {
     return {
       headers: [
-        { text: 'NAME', value: 'full_name' },
-        { text: 'EMAIL', value: 'email' },
-        { text: 'DATE', value: 'start_date' },
-        { text: 'SALARY', value: 'salary' },
-        { text: 'AGE', value: 'age' },
-        { text: 'STATUS', value: 'status' }
-      ],
-      userList: data,
-      status: {
-        1: 'Current',
-        2: 'Professional',
-        3: 'Rejected',
-        4: 'Resigned',
-        5: 'Applied'
-      },
-      statusColor,
-
-      // icons
-      icons: {
-        mdiSquareEditOutline,
-        mdiDotsVertical
-      }
+        { text: 'NOME', value: 'name' },
+        { text: 'E-MAIL', value: 'email' },
+        { text: 'CPF', value: 'cpf' },
+        { text: 'TIPO', value: 'typeDescription' },
+        { text: 'STATUS', value: 'statusDescription' }
+      ]
     }
   }
 }
