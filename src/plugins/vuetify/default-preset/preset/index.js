@@ -4,22 +4,22 @@ export default {
   theme: {
     themes: {
       light: {
-        primary: '#0D47A1',
-        accent: '#0d6efd',
-        secondary: '#8A8D93',
-        success: '#56CA00',
-        info: '#16B1FF',
-        warning: '#FFB400',
-        error: '#FF4C51'
+        primary: '#008F8C',
+        accent: '#015958',
+        secondary: '#023535',
+        success: '#0CABA8',
+        info: '#0FC2C0',
+        warning: '#ffffff',
+        error: '#003434'
       },
       dark: {
-        primary: '#9155FD',
-        accent: '#0d6efd',
-        secondary: '#8A8D93',
-        success: '#56CA00',
-        info: '#16B1FF',
-        warning: '#FFB400',
-        error: '#FF4C51'
+        primary: '#008F8C',
+        accent: '#015958',
+        secondary: '#023535',
+        success: '#0CABA8',
+        info: '#0FC2C0',
+        warning: '#003434',
+        error: '#008F8C'
       }
     }
   }
