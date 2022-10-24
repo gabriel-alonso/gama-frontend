@@ -26,80 +26,24 @@
         :to="{ name: 'dashboard' }"
         :icon="icons.mdiHomeOutline"
       ></nav-menu-link>
+
       <nav-menu-link
-        title="Solicitações"
+        title="Requests"
         :to="{ name: 'requests' }"
-        :icon="icons.mdiHomeOutline"
+        :icon="icons.mdiFileDocument"
       ></nav-menu-link>
 
       <nav-menu-link
-        title="Vazamentos"
-        :to="{ name: 'cards' }"
-        :icon="icons.mdiCreditCardOutline"
+        title="Scan"
+        :to="{ name: 'scan' }"
+        :icon="icons.mdiCreditCardScan"
       ></nav-menu-link>
 
       <nav-menu-link
-        title="Relatórios"
-        :to="{ name: 'simple-table' }"
-        :icon="icons.mdiTable"
+        title="Scan Data"
+        :to="{ name: 'scan-data' }"
+        :icon="icons.mdiBarcodeScan"
       ></nav-menu-link>
-
-      <nav-menu-link
-        title="Formulário"
-        :to="{ name: 'form-layouts' }"
-        :icon="icons.mdiFormSelect"
-      ></nav-menu-link>
-
-      <nav-menu-link
-        title="Perfil"
-        :to="{ name: 'pages-account-settings' }"
-        :icon="icons.mdiAccountCogOutline"
-      ></nav-menu-link>
-
-      <!-- <nav-menu-group title="Pages" :icon="icons.mdiFileOutline">
-        <nav-menu-link
-          title="Login"
-          :to="{ name: 'pages-login' }"
-          target="_blank"
-        ></nav-menu-link>
-        <nav-menu-link
-          title="Register"
-          :to="{ name: 'pages-register' }"
-          target="_blank"
-        ></nav-menu-link>
-        <nav-menu-link
-          title="Error"
-          :to="{ name: 'error-404' }"
-          target="_blank"
-        ></nav-menu-link>
-      </nav-menu-group> -->
-
-      <!-- <nav-menu-section-title title="USER INTERFACE"></nav-menu-section-title>
-      <nav-menu-link
-        title="Typography"
-        :to="{ name: 'typography' }"
-        :icon="icons.mdiAlphaTBoxOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Icons"
-        :to="{ name: 'icons' }"
-        :icon="icons.mdiEyeOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Cards"
-        :to="{ name: 'cards' }"
-        :icon="icons.mdiCreditCardOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Tables"
-        :to="{ name: 'simple-table' }"
-        :icon="icons.mdiTable"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Form Layouts"
-        :to="{ name: 'form-layouts' }"
-        :icon="icons.mdiFormSelect"
-      ></nav-menu-link> -->
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -114,7 +58,10 @@ import {
   mdiTable,
   mdiFileOutline,
   mdiFormSelect,
-  mdiAccountCogOutline
+  mdiAccountCogOutline,
+  mdiFileDocument,
+  mdiCreditCardScan,
+  mdiBarcodeScan
 } from '@mdi/js'
 import NavMenuSectionTitle from './components/NavMenuSectionTitle.vue'
 import NavMenuGroup from './components/NavMenuGroup.vue'
@@ -142,7 +89,10 @@ export default {
         mdiTable,
         mdiFileOutline,
         mdiFormSelect,
-        mdiAccountCogOutline
+        mdiAccountCogOutline,
+        mdiFileDocument,
+        mdiCreditCardScan,
+        mdiBarcodeScan
       }
     }
   }
