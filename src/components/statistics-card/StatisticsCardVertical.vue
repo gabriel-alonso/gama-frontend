@@ -1,26 +1,14 @@
 <template>
   <v-card>
     <v-card-title class="align-start">
-      <v-avatar
-        :color="color"
-        size="38"
-        class="elevation-3"
-      >
-        <v-icon
-          size="24"
-          color="white"
-          class="rounded-0"
-        >
+      <v-avatar :color="color" size="38" class="elevation-3">
+        <v-icon size="24" color="white" class="rounded-0">
           {{ icon }}
         </v-icon>
       </v-avatar>
       <v-spacer></v-spacer>
 
-      <v-btn
-        small
-        icon
-        class="me-n3 mt-n1"
-      >
+      <v-btn small icon class="me-n3 mt-n1">
         <v-icon>
           {{ mdiDotsVertical }}
         </v-icon>
@@ -33,11 +21,15 @@
       </p>
 
       <div class="d-flex align-end flex-wrap">
-        <span class="font-weight-semibold text-2xl me-1 mb-2">{{ statistics }}</span>
+        <span class="font-weight-semibold text-2xl me-1 mb-2">{{
+          statistics
+        }}</span>
         <span
           class="percentage text-xs mb-2"
-          :class="checkChange(change) ? 'success--text':'error--text'"
-        > {{ change }}</span>
+          :class="checkChange(change) ? 'success--text' : 'error--text'"
+        >
+          {{ change }}</span
+        >
       </div>
       <p class="text-xs text--secondary mb-0">
         {{ subtitle }}
@@ -56,7 +48,7 @@ export default {
     color: { type: String, default: '' },
     subtitle: { type: String, default: '' },
     statistics: { type: String, default: '' },
-    change: { type: String, default: '' },
+    change: { type: String, default: '' }
   },
   setup() {
     const checkChange = value => {
@@ -70,9 +62,9 @@ export default {
 
     return {
       mdiDotsVertical,
-      checkChange,
+      checkChange
     }
-  },
+  }
 }
 </script>
 
