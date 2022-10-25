@@ -23,7 +23,7 @@
 
           <!-- Right Content -->
           <a
-            href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free"
+            href="https://github.com/Clarify-data-visibility/gama-frontend"
             target="_blank"
             rel="nofollow"
           >
