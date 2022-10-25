@@ -54,10 +54,11 @@ export default {
     return {
       headers: [
         { text: 'NOME', value: 'name' },
-        { text: 'E-MAIL', value: 'email' },
-        { text: 'CPF', value: 'cpf' },
-        { text: 'TIPO', value: 'typeDescription' },
-        { text: 'STATUS', value: 'statusDescription' }
+        { text: 'TIPO', value: 'email' },
+        { text: 'TIPO DE RECURSO', value: 'resourceType' },
+        { text: 'CONFIGURAÇÃO', value: 'config' },
+        { text: 'STATUS', value: 'status' },
+        { text: 'AÇÃO', value: 'action' }
       ]
     }
   }

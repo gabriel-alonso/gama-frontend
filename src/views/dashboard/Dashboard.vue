@@ -1,43 +1,23 @@
 <template>
   <v-row>
-    <v-col
-      cols="12"
-      md="4"
-    >
+    <v-col cols="12" md="4">
       <dashboard-congratulation-john></dashboard-congratulation-john>
     </v-col>
-    <v-col
-      cols="12"
-      md="8"
-    >
+    <v-col cols="12" md="8">
       <dashboard-statistics-card></dashboard-statistics-card>
     </v-col>
 
-    <v-col
-      cols="12"
-      sm="6"
-      md="4"
-    >
+    <v-col cols="12" sm="6" md="4">
       <dashboard-weekly-overview></dashboard-weekly-overview>
     </v-col>
 
-    <v-col
-      cols="12"
-      md="4"
-      sm="6"
-    >
+    <v-col cols="12" md="4" sm="6">
       <dashboard-card-total-earning></dashboard-card-total-earning>
     </v-col>
 
-    <v-col
-      cols="12"
-      md="4"
-    >
+    <v-col cols="12" md="4">
       <v-row class="match-height">
-        <v-col
-          cols="12"
-          sm="6"
-        >
+        <v-col cols="12" sm="6">
           <statistics-card-vertical
             :change="totalProfit.change"
             :color="totalProfit.color"
@@ -47,10 +27,7 @@
             :subtitle="totalProfit.subtitle"
           ></statistics-card-vertical>
         </v-col>
-        <v-col
-          cols="12"
-          sm="6"
-        >
+        <v-col cols="12" sm="6">
           <statistics-card-vertical
             :change="totalSales.change"
             :color="totalSales.color"
@@ -60,10 +37,7 @@
             :subtitle="totalSales.subtitle"
           ></statistics-card-vertical>
         </v-col>
-        <v-col
-          cols="12"
-          sm="6"
-        >
+        <v-col cols="12" sm="6">
           <statistics-card-vertical
             :change="newProject.change"
             :color="newProject.color"
@@ -74,10 +48,7 @@
           ></statistics-card-vertical>
         </v-col>
 
-        <v-col
-          cols="12"
-          sm="6"
-        >
+        <v-col cols="12" sm="6">
           <statistics-card-vertical
             :change="salesQueries.change"
             :color="salesQueries.color"
@@ -90,27 +61,32 @@
       </v-row>
     </v-col>
 
-    <v-col
-      cols="12"
-      md="4"
-    >
+    <v-col cols="12" md="4">
       <dashboard-card-sales-by-countries></dashboard-card-sales-by-countries>
     </v-col>
-    <v-col
-      cols="12"
-      md="8"
-    >
+    <v-col cols="12" md="8">
       <dashboard-card-deposit-and-withdraw></dashboard-card-deposit-and-withdraw>
     </v-col>
     <v-col cols="12">
-      <dashboard-datatable></dashboard-datatable>
+      <list-request></list-request>
     </v-col>
+    <!-- <v-col cols="12">
+      <list-scan></list-scan>
+    </v-col>
+    <v-col cols="12">
+      <list-scan-data></list-scan-data>
+    </v-col> -->
   </v-row>
 </template>
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiPoll, mdiLabelVariantOutline, mdiCurrencyUsd, mdiHelpCircleOutline } from '@mdi/js'
+import {
+  mdiPoll,
+  mdiLabelVariantOutline,
+  mdiCurrencyUsd,
+  mdiHelpCircleOutline
+} from '@mdi/js'
 import StatisticsCardVertical from '@/components/statistics-card/StatisticsCardVertical.vue'
 
 // demos
@@ -120,18 +96,19 @@ import DashboardCardTotalEarning from './DashboardCardTotalEarning.vue'
 import DashboardCardDepositAndWithdraw from './DashboardCardDepositAndWithdraw.vue'
 import DashboardCardSalesByCountries from './DashboardCardSalesByCountries.vue'
 import DashboardWeeklyOverview from './DashboardWeeklyOverview.vue'
-import DashboardDatatable from './DashboardDatatable.vue'
+import ListRequest from './ListRequest.vue'
+import ListScan from './ListScan.vue'
+import ListScanData from './ListScanData.vue'
 
 export default {
   components: {
-    StatisticsCardVertical,
     DashboardCongratulationJohn,
     DashboardStatisticsCard,
     DashboardCardTotalEarning,
     DashboardCardDepositAndWithdraw,
     DashboardCardSalesByCountries,
     DashboardWeeklyOverview,
-    DashboardDatatable,
+    StatisticsCardVertical
   },
   setup() {
     const totalProfit = {
@@ -140,7 +117,7 @@ export default {
       color: 'success',
       subtitle: 'Weekly Project',
       statistics: '$25.6k',
-      change: '+42%',
+      change: '+42%'
     }
 
     const totalSales = {
@@ -149,7 +126,7 @@ export default {
       color: 'secondary',
       subtitle: 'Past Month',
       statistics: '$78',
-      change: '-15%',
+      change: '-15%'
     }
 
     // vertical card options
@@ -159,7 +136,7 @@ export default {
       color: 'primary',
       subtitle: 'Yearly Project',
       statistics: '862',
-      change: '-18%',
+      change: '-18%'
     }
 
     const salesQueries = {
@@ -168,15 +145,15 @@ export default {
       color: 'warning',
       subtitle: 'Last week',
       statistics: '15',
-      change: '-18%',
+      change: '-18%'
     }
 
     return {
       totalProfit,
       totalSales,
       newProject,
-      salesQueries,
+      salesQueries
     }
-  },
+  }
 }
 </script>

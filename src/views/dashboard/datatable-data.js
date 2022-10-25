@@ -11,6 +11,8 @@ const data = [
     age: '27',
     experience: '2 Years',
     status: 1,
+    type: 'teste',
+    cpf: '111.111.111-11'
   },
   {
     responsive_id: '',
@@ -24,6 +26,8 @@ const data = [
     age: '61',
     experience: '1 Year',
     status: 2,
+    type: 'teste',
+    cpf: '111.111.111-11'
   },
   {
     responsive_id: '',
@@ -37,6 +41,8 @@ const data = [
     age: '59',
     experience: '9 Years',
     status: 3,
+    type: 'teste',
+    cpf: '111.111.111-11'
   },
   {
     responsive_id: '',
@@ -50,6 +56,8 @@ const data = [
     age: '30',
     experience: '0 Year',
     status: 4,
+    type: 'teste',
+    cpf: '111.111.111-11'
   },
   {
     responsive_id: '',
@@ -63,6 +71,8 @@ const data = [
     age: '66',
     experience: '6 Years',
     status: 5,
+    type: 'teste',
+    cpf: '111.111.111-11'
   },
   {
     responsive_id: '',
@@ -76,6 +86,8 @@ const data = [
     age: '33',
     experience: '3 Years',
     status: 2,
+    type: 'teste',
+    cpf: '111.111.111-11'
   },
   {
     responsive_id: '',
@@ -89,6 +101,8 @@ const data = [
     age: '61',
     experience: '1 Year',
     status: 1,
+    type: 'teste',
+    cpf: '111.111.111-11'
   },
   {
     responsive_id: '',
@@ -102,7 +116,9 @@ const data = [
     age: '22',
     experience: '2 Years',
     status: 2,
-  },
+    type: 'teste',
+    cpf: '111.111.111-11'
+  }
 ]
 
 export default data
